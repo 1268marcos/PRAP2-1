@@ -13,32 +13,29 @@ import androidx.room.PrimaryKey;
 
 
 public class WorksArt {
-     private int mId;
-     private String mName;
-     private String mLocation;
-     private int mScore;
-     private String mCreationDate;
-      
-     public void setName(String name) {
-        mName = name.toUpperCase().trim();
-    
-
-    @PrimaryKey(autoGenerate = true)
-    @NonNull
+  
+    @PrimaryKey(autoGenerate = true) 
+     @NonNul
     @ColumnInfo(name = "artId")
     private int mId;
 
-    @Nullable
+    @Nullable 
     @ColumnInfo(name = "artName")
     private String mName;
-
+       
+    @NonNull 
+    @ColumnInfo(name= "Location")
+    private String mLocation;
+       
+    @NonNull
+    @ColumnInfo(name = "CreationDate")
     private String mCreotionDate;
 
     public Museum(@Nullable String name, String location , int score, String creationDate) {
-        mName = name;
-        mLocation = location;
-        mScore = score;
-        mCreationDate = creationDate;
+        this.mName = name;
+        this.mLocation = location;
+        this.mScore = score;
+        this.mCreationDate = creationDate;
     }
 
     public int getId() {
@@ -46,7 +43,7 @@ public class WorksArt {
     }
 
     public void setId(int id) {
-        mId = id;
+        this.mId = id;
     }
 
     public String getName() {
@@ -54,7 +51,7 @@ public class WorksArt {
     }
 
     public void setName(String name) {
-        mName = name;
+        this.mName = name;
     }
 
     public String getLocation() {
@@ -62,7 +59,7 @@ public class WorksArt {
     }
 
     public void setLocation(String loation) {
-        mLocation = location;
+        this.mLocation = location;
     }
 
     public int getScore() {
@@ -70,7 +67,7 @@ public class WorksArt {
     }
 
     public void setScore(int score) {
-        mScore = score;
+       this.mScore = score;
     }
 
     public String getCreationDate() {
@@ -78,10 +75,7 @@ public class WorksArt {
     }
 
     public void setCreationDate(String creationDate) {
-        mCreationDate = creationDate;
+       this.mCreationDate = creationDate;
     }
-
-    private int mScore;
-    private String mCreationDate;
 
 }
