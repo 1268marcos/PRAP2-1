@@ -12,10 +12,10 @@ import androidx.room.PrimaryKey;
 
 
 
-public class WorksArt {
+public class WorkOfArt {
   
     @PrimaryKey(autoGenerate = true) 
-     @NonNul
+     @NonNull
     @ColumnInfo(name = "artId")
     private int mId;
 
@@ -29,9 +29,12 @@ public class WorksArt {
        
     @NonNull
     @ColumnInfo(name = "CreationDate")
-    private String mCreotionDate;
+    private String mCreationDate;
 
-    public Museum(@Nullable String name, String location , int score, String creationDate) {
+    private int mScore;
+  
+  //o nome do construtor dever ser o mesmo nome da classe
+    public WorkOfArt(@Nullable String name, String location , int score, String creationDate) {
         this.mName = name;
         this.mLocation = location;
         this.mScore = score;
@@ -55,10 +58,10 @@ public class WorksArt {
     }
 
     public String getLocation() {
-        return mlocation;
+        return mLocation;
     }
 
-    public void setLocation(String loation) {
+    public void setLocation(String location) {
         this.mLocation = location;
     }
 
